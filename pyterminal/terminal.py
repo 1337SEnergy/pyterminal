@@ -44,14 +44,13 @@ class ActionControllerConsole(npyscreen.ActionControllerSimple):
 class Console(npyscreen.FormMuttActive):
 	MAIN_WIDGET_CLASS = npyscreen.BufferPager;
 	ACTION_CONTROLLER = ActionControllerConsole;
-		
+	
 	def consolePrint(self, s):
 		if len(s) == 1 and (s == "\n" or s == " "):
 			if len(self.wMain.values) > 0:
-				self.wMain.values[-1] += s;
 				if isinstance(self.wMain, npyscreen.BufferPager):
 					self.wMain.buffer([], scroll_end = True);
-		else:
+		else:			
 			newLine = s.find("\n");
 			sNext = "";
 			if newLine > -1:

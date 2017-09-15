@@ -1,4 +1,4 @@
-import sys, pyterminal
+import sys, pyterminal;
 
 def main():
 	terminal = pyterminal.Terminal(commandset = pyterminal.CommandSet(), commands = sys.argv[1:]);
