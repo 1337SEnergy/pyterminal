@@ -85,7 +85,7 @@ class Terminal(npyscreen.NPSAppManaged):
 
 		self.form.wStatus1.value = self.outputName;
 		self.form.wStatus2.value = self.inputName;
-		self.form.wMain.editable = False;
+		#self.form.wMain.editable = False;
 
 		self.form.commandSet = self.commandSet;
 		if self.commands != None:
